@@ -1,13 +1,13 @@
 <script setup lang="ts">
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
 import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  </header>
-
-  <RouterView />
+  <div class="bg-white">
+    <TheHeader />
+    <RouterView />
+    <TheFooter />
+  </div>
 </template>
-
-<style scoped></style>
