@@ -20,7 +20,7 @@ const mobileMenuOpen = ref(false)
 <template>
   <div class="flex h-full">
     <!-- Narrow sidebar -->
-    <div class="hidden w-28 overflow-y-auto bg-slate-900 md:block">
+    <div class="hidden w-28 bg-slate-900 md:fixed md:inset-y-0 md:block">
       <div class="flex w-full flex-col items-center py-6">
         <RouterLink to="/" class="flex flex-shrink-0 items-center">
           <VideoCameraIcon class="h-8 w-auto text-white" />
@@ -75,9 +75,11 @@ const mobileMenuOpen = ref(false)
     </TransitionRoot>
 
     <!-- Content area -->
-    <div class="flex min-h-screen flex-1 flex-col overflow-hidden">
-      <TheHeader />
-      <RouterView />
+    <div class="flex flex-1 flex-col">
+      <TheHeader class="md:ml-28" />
+      <main class="mt-16 flex-1 pb-8 md:ml-28">
+        <RouterView />
+      </main>
     </div>
   </div>
 </template>

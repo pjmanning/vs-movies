@@ -13,8 +13,8 @@ const mobileMenuOpen = ref(false)
 </script>
 
 <template>
-  <header class="w-full">
-    <div class="relative z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white shadow-sm">
+  <header class="fixed z-10 w-full">
+    <div class="relative z-40 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white shadow-sm">
       <button type="button" class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500 md:hidden" @click="mobileMenuOpen = true">
         <span class="sr-only">Open sidebar</span>
         <Bars3BottomLeftIcon class="h-6 w-6" aria-hidden="true" />
